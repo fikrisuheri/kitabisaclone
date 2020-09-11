@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.form-control {
+    @apply bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-3 px-4 text-purple-700 leading-tight
+}
+
+.active {
+    @apply text-purple-500
+}
+
+.form-control:focus {
+    @apply outline-none
+}
+
+.btn-purple {
+    @apply bg-purple-700 text-white p-3 rounded text-center
+}
+
+.btn-purple-sm {
+    @apply p-2
+}
+
+.btn-purple:focus {
+    @apply bg-purple-600 outline-none duration-300
+}
+
+.btn-purple:hover {
+    @apply bg-purple-600 duration-300
+}
+
+.btn-secondary {
+    @apply bg-gray-200 p-3 rounded text-center
+}
+
+.btn-secondary-sm {
+    @apply p-2
+}
+
+.btn-no-rounded {
+    @apply rounded-none
+}
+
+.btn-secondary:focus {
+    @apply bg-gray-300 outline-none duration-300
+}
+
+.btn-secondary:hover {
+    @apply bg-gray-300 duration-300
+}
+
+.bottom-nav {
+    @apply block fixed inset-x-0 bottom-0 z-10
+}
+
+.bottom-nav-tab {
+    @apply flex justify-between
+}
+
+.bottom-nav-item {
+    @apply w-full justify-center inline-block text-center pt-2 pb-1
+}
+
+.divider {
+    @apply h-3 bg-gray-300 outline-none my-2
+}
+
+.card-category {
+    @apply flex flex-col p-1 items-center
+}
