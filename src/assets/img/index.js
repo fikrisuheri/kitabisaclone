@@ -1,5 +1,5 @@
 const logo_white = require('./logo-white.png')
-const banner1 = require('./banner.png')
+const banner1 = require('./banner.jpg')
 const banner2 = require('./banner2.png')
 const sayur = require('./sayuran.svg')
 const sayurPhoto = require('./Sop.jpg')
@@ -10,7 +10,7 @@ const avatar = require('./avatar.png')
 const svgShop = require('./shop.svg')
 const svgHero = require('./hero.svg')
 const imgPlacholder = require('./imgplaceholder.png')
-
+const photo = require('./foto.jpg')
 
 export {
     logo_white,
@@ -24,5 +24,6 @@ export {
     avatar,
     svgShop,
     svgHero,
-    imgPlacholder
+    imgPlacholder,
+    photo
 }

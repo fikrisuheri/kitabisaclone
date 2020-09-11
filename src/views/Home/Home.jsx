@@ -1,59 +1,91 @@
 import React from 'react';
-import { logo_white, sayurPhoto } from '../../assets/img';
+import { Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { logo_white, photo, sayurPhoto } from '../../assets/img';
 import Slider from './Slider';
-import Category from './Category';
-import Product from './Product';
 
 
 function Home(props) {
-    
-    const datas = [
-        { 
-            title : 'Produk Terbaru',
-            data : [
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-            ]
-        },
-        {
-            title : 'Buat Kamu Yang Lapar',
-            data : [
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-            ]
-        },
-        {
-            title : 'Daging Ayam',
-            data : [
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-                {name: 'Paket Sop', price: 'Rp 20,000', img: sayurPhoto , url : '/product/detail/paket-sop-ngenah' },
-            ]
-        }
-    ]
-    console.log(datas)
-    console.log(localStorage.getItem('token'))
+
     return (
         <div>
-            <nav className="w-full bg-purple-500 py-3 px-2">
-                <img src={logo_white} alt="" className="w-24" srcset="" />
+            <nav className="grid grid-cols-10 w-full bg-biru py-3 px-2">
+                <div className="col-span-1">
+                    <img src={logo_white} alt="" className="w-8 h-8" srcset="" />
+                </div>
+                <div className="col-span-9 px-2">
+                    <input type="text" className="bg-biru-muda w-full placeholder-white py-2 px-3 rounded-full text-sm" placeholder="cari yang ingin kamu bantu" />
+                </div>
             </nav>
-            <Slider />
-            <Category />
-            <hr className="divider" />
-            {
-                datas.map((item, i) =>
-                    <Product props={{
-                        title: item.title,
-                        data: item.data
-                    }} />
-                )
-            }
+            <div className="p-3 flex flex-col">
+                <h1 className=" text-lg font-semibold text-black">Ingin Menggalang Dana ?</h1>
+                <button className="btn-biru mt-4 text-lg font-bold">
+                    Galang Dana Sekarang
+                </button>
+                <button className="btn-biru-outline mt-4 text-lg font-bold">
+                    Galang Dana Sekarang
+                </button>
+            </div>
+            <hr className="bg-abu h-2 outline-none my-2" />
+            <div className="px-3 py-2">
+                <Slider />
+            </div>
+            <hr className="bg-abu h-2 outline-none my-2" />
+            <div className="p-3">
+                <h1 className=" text-sm font-semibold text-black">Penggalangan Dana Mendesak ?</h1>
+            </div>
+            <div className="flex p-3">
+                <Swiper
+                    slidesPerView={2}
+                    spaceBetween={10}
+                >
+                    <SwiperSlide>
+                        <Link to="/detail">
+                            <div class="mb-2 shadow-md">
+                            <img src={photo} alt="" srcset="" />
+                            <div className="p-2">
+                                <p className="text-sm">Bantu warga kurang mampu</p>
+                                <input type="range" className="text-sm w-full my-2"/>
+                                <div className="flex flex-row justify-between">
+                                    <small>Rp.70.000.000</small>
+                                    <small>40 hari lagi</small>
+                                </div>
+                            </div>
+                        </div>
+                        </Link>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Link to="/detail">
+                            <div class="mb-2 shadow-md">
+                            <img src={photo} alt="" srcset="" />
+                            <div className="p-2">
+                                <p className="text-sm">Bantu warga kurang mampu</p>
+                                <input type="range" className="text-sm w-full my-2"/>
+                                <div className="flex flex-row justify-between">
+                                    <small>Rp.70.000.000</small>
+                                    <small>40 hari lagi</small>
+                                </div>
+                            </div>
+                        </div>
+                        </Link>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Link to="/detail">
+                            <div class="mb-2 shadow-md">
+                            <img src={photo} alt="" srcset="" />
+                            <div className="p-2">
+                                <p className="text-sm">Bantu warga kurang mampu</p>
+                                <input type="range" className="text-sm w-full my-2"/>
+                                <div className="flex flex-row justify-between">
+                                    <small>Rp.70.000.000</small>
+                                    <small>40 hari lagi</small>
+                                </div>
+                            </div>
+                        </div>
+                        </Link>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
         </div>
     );
 }

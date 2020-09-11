@@ -13,6 +13,7 @@ function Slider(props) {
                 delay: 3000,
                 disableOnInteraction: false
             }}
+            className="rounded-lg"
         >
             <SwiperSlide><img src={banner1} alt="" srcset="" /></SwiperSlide>
             <SwiperSlide><img src={banner2} alt="" srcset="" /></SwiperSlide>

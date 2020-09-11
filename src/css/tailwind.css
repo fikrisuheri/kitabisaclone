@@ -6,28 +6,46 @@
 }
 
 .active {
-    @apply text-purple-500
+    @apply text-biru
 }
 
 .form-control:focus {
     @apply outline-none
 }
 
-.btn-purple {
-    @apply bg-purple-700 text-white p-3 rounded text-center
+.btn-biru {
+    @apply bg-biru text-white p-2 rounded text-center rounded-full
 }
 
-.btn-purple-sm {
+.btn-biru-sm {
     @apply p-2
 }
 
-.btn-purple:focus {
-    @apply bg-purple-600 outline-none duration-300
+.btn-biru:focus {
+    @apply bg-biru-muda outline-none duration-300
 }
 
-.btn-purple:hover {
-    @apply bg-purple-600 duration-300
+.btn-biru:hover {
+    @apply bg-biru-muda duration-300
 }
+
+
+.btn-biru-outline {
+    @apply bg-white border border-biru  text-biru p-2 rounded text-center rounded-full
+}
+
+.btn-biru-outline-sm {
+    @apply p-2
+}
+
+.btn-biru-outline:focus {
+    @apply bg-biru-muda outline-none duration-300
+}
+
+.btn-biru-outline:hover {
+    @apply bg-biru-muda duration-300
+}
+
 
 .btn-secondary {
     @apply bg-gray-200 p-3 rounded text-center

@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Home, Welcome, NotFoundPage, DetailProduct,UserDetailProduct, Register, Success, Login, User, MyProduct, BukaToko, SuccessToko, TambahProduct } from '../views';
+import { Home, Welcome, NotFoundPage, DetailProduct } from '../views';
 import BottomBar from '../component/BottomBar';
 import TopBar from '../component/TopBar';
-import ProtectedRoute from './ProtectedRoute';
+
 
 function index(props) {
     return (
@@ -22,56 +22,10 @@ function index(props) {
                         </BottomBar>
                     </Route>
 
-                    <Route exact path="/user">
-                        <BottomBar>
-                            <User />
-                        </BottomBar>
+                    <Route path="/detail">
+                        <DetailProduct />
                     </Route>
 
-                    <ProtectedRoute exact path="/user/product">
-                            <MyProduct />
-                    </ProtectedRoute>
-
-                    <ProtectedRoute exact path="/user/product/detail">
-                            <UserDetailProduct />
-                    </ProtectedRoute>
-
-                    <ProtectedRoute path="/user/product/tambah">
-                        <TopBar>
-                            <TambahProduct />
-                        </TopBar>
-                    </ProtectedRoute>
-
-                    <ProtectedRoute exact path="/user/bukatoko">
-                        <TopBar>
-                            <BukaToko />
-                        </TopBar>
-                    </ProtectedRoute>
-
-                    <ProtectedRoute path="/user/bukatoko/success">
-                            <SuccessToko />
-                    </ProtectedRoute>
-
-
-                    {/* Route Without Bottom Bar */}
-
-                    <Route path="/product/detail/:identifier">
-                        <TopBar>
-                            <DetailProduct />
-                        </TopBar>
-                    </Route>
-
-                    <Route path="/register">
-                        <Register />
-                    </Route>
-
-                    <Route path="/login">
-                        <Login />
-                    </Route>
-
-                    <Route path="/success">
-                        <Success />
-                    </Route>
 
                     <Route path="*">
                         <NotFoundPage />
